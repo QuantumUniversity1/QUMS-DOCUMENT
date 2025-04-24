@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Quantum University - Document Verification</h2>
+
+    <form id="verifyForm">
+        <input type="text" id="rollNo" placeholder="Enter Roll Number" required><br>
+        <input type="text" id="docNo" placeholder="Enter Document Number" required><br>
+        <button type="submit">Verify</button>
+    </form>
+
+    <script>
+        document.getElementById('verifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const rollNo = document.getElementById('rollNo').value.trim();
+            const docNo = document.getElementById('docNo').value.trim();
+
+            // Example check - add more conditions if needed
+            if (rollNo === "1801311011" && docNo === "210900564") {
+                window.location.href = "1801311011.html"; // Redirect to new page
+            } else {
+                alert("Invalid Roll Number or Document Number.");
+            }
+        });
+    </script>
+
+</body>
+</html>
